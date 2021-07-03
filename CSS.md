@@ -676,7 +676,31 @@ ul {
 
 # 7.CSS grid and Media Query
 
--
+- A CSS grid can be initialized using
+
+```
+container {
+    display : grid;
+}
+```
+
+- All direct children automatecally becomes grid items
+
+### The grid-column gap property
+
+- Used to adjust the space between the rows of a CSS grid.
+
+### The grid - gap property
+
+- Shorthand property for grid-row-gap and grid-row-comumn-gap
+
+```
+container {
+  display : grid;
+  grid-gap : 40px 100px;
+}
+40 for row and 100 for column
+```
 
 # 8. Transform Transition and Animation
 
