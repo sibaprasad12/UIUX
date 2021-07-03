@@ -609,3 +609,27 @@ p{
 ## font-family -> specific
 
 ## generic-family -> Generic
+
+# Size position and List
+
+- There are more units for describing size other than px.
+- There are rem, cm, vw, vh, percentage etc
+
+## Whats wrong with pixels ?
+
+- Pixels(px) are relative to the viewing device.
+- For a device with size 1920x1080, 1 px is 1 unit out of 1080/1920
+
+### Relative lengths
+
+- These units are relative to the other length property
+- Following are some of the most commonly used relatives length
+
+### em
+
+- Unit relative to the parent font size.
+- Em means My parent elements font size
+
+### rem -> unit relative to the root font size {html tag}
+
+### VW -> Unit relative to 1% View port width
