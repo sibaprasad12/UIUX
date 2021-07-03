@@ -115,7 +115,8 @@
 
 ## Understanding CSS Syntax
 
-- ```h1 {
+- ```
+      h1 {
           color:blue;
           text-align:center;
           }
