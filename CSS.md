@@ -25,6 +25,28 @@
 - Superior Styles to HTML
 - Multiple Device Compatibility
 
+## What is DOM ?
+
+- DOM stands for document Object Model.
+- When a page is loaded, the browser creates a DOM of the page which is constructed as a Tree of objects
+
+## HTML id and class attribute
+
+- WHen an HTML element is given an id, it serves as an unitue identifier for that element
+- On the Other hand, when an HTML element is given a class, it now belongs to that class.
+- More than one element can belongs to a single class but every element must have a unique ID(if assigned)
+- We can add multiple classes to an element like this
+
+```
+<div id = "first" class = c1 c2 c3>>
+...
+</div>
+```
+
+- Here first is the unique id
+- Multiple classes followed by spaces.
+- In above code, c1, c2, c3 is given to the same element <div>
+
 ## How to include CSS in html page
 
 - There are 3 ways to do this
@@ -91,7 +113,7 @@
       }
   ```
 
-## ANother way to import extrrnal Style sheet
+## Another way to import extrrnal Style sheet
 
 - Create a CSS style file named **style.css** in the same folder with all the defined style
 - Define the style.css in style sheet like below
@@ -124,10 +146,24 @@
 - here h1 -> selector  
    color -> Property  
    blue -> Value  
-   text-align -> Another Property
-  center -> Value
+   text-align -> Another Property  
+   center -> Value
 - All properties are separated by semicolon
 - You can add any number of properties
+
+## What is CSS Selector
+
+- A CSS selector is used to select an HTML elemtnt(s) for styling
+
+```
+body{
+  color: red;
+  background: pink;
+}
+```
+
+- After each property inside style, there must be a semicolon
+- In above code color, background are the property name and the values are defined after a colon
 
 ## Selector
 
@@ -214,10 +250,11 @@
 
 - **Grouping Selector** if a particular style is apply to some of the elements, instead of declaring style individually we can define once like this
 - ```
-      h1,h2,h3  {
-          common properties
-      }
+        h1,h2,h3  {
+            common properties
+        }
   ```
+  > > You can define multiple class names in one element separated by space
 
 ## Common properties
 
@@ -272,4 +309,303 @@
 - **visibility** visible, hidden, collapse, inherit,
 - **position**
 - **layering**
--
+
+## Colors and Background
+
+- CSS rules are simple key-value pairs with a selector we can write CSS rules o change color and set backgrounds
+
+## The color property
+
+- CSS color property can be used to set the text color inside an element
+
+```
+p {
+  color :  red // text color will be changed to red with element name p
+}
+```
+
+- Similarly we can set color for different elements.
+
+## TYpes of color values
+
+- FOllowing are the most commonly used color values in CSS
+- **RGB** Specify color using RED, GREEN, BLUE values, eg rgb(200, 98,70)
+- **HEX CODE** specify color using hash code values of colors, eg #d3d3d3
+- **HSL** Specify the color using hsl values, eg hsl(8%, 90%, 63%)
+- HSL - Hue Saturation Lightness
+  > > THe value of the color or background color is provided as any one of these values
+  > > We also have an RGBA and HSLA values for color but they are rarely used by beginners. A stands for alpha
+
+## The Background-color property
+
+- THe CSS background-color property specifies the background color of a container
+- for example
+
+```
+.brown{
+  background-color : brown;
+}
+```
+
+## Background-image property
+
+- Used to set an image as the background
+
+```
+body{
+    background-image: Url("image.png")
+}
+```
+
+- THe image is by default repeated in X and Y directions
+
+## THe background-repeat property
+
+- can be any one of these
+- **repeat-x** -> Repeat in horizontal direction
+- **repeat-y** -> Repeat in vertical direction
+- **no-repeat** -> Image not Repeat
+  > > See more posible values at MDN docs
+
+## THe background-size property
+
+- Can be following
+- **cover** -> Fits and no empty space remains
+- **contain** -> Fits and Image is fully visible
+- **auto** -> Display in original size
+- **{{width}}** -> Set width & height will be set automatically
+- **{{width}} {{height}}** -> Set width & height
+  > > Always check the MDN docs to check a given CSS property. Remember practice will make you perfect
+
+## Background-position property
+
+- Set the starting position of a background image
+
+```
+div{
+    background-position : left top;
+}
+```
+
+## background-attachment property
+
+- Defines a scrollable Or non-scrollable character of a background image
+
+```
+div2{
+  background-attachment : fixed
+}
+```
+
+## Background shorthand property
+
+- A single property to set multiple background properties
+
+```
+div3{
+    background: red URL('img.png') no-repeat fixed right top;
+}
+```
+
+- One of the properties acan be missing given the others are in order
+
+# Box Model
+
+- The CSS Box model looks at all the HTML elements as boxes
+- One Box another, like h1 is one box inside another box body
+- With properties like padding, boarder margin
+
+## Setting width and height
+
+- We can set width and height in CSS as follows
+
+```
+  #box {
+    height : 70px;
+    width : 70 Px;
+  }
+```
+
+> > The total Width/Height is calculated as follows
+> > total height = height + top|bottom padding + top|bottom boarder + top|bottom margin
+
+## Setting margin and padding
+
+- We can set margin and padding as follows
+
+```
+.box{
+  margin : 3px;   // sets top, bottom,left and right values for both the parameters
+  padding : 3px;
+}
+```
+
+## another way
+
+```
+boxMargin {
+  margin : 7px 0px 2px 11px  (top, right bottom left) clockwise
+}
+
+boxLast {
+    margin: 7px 3px (top & bottom left & right)
+}
+```
+
+- We can also set individual margins/paddings like this
+
+```
+boxMargin {
+  margin-top : 9px;
+  margin-bottom : 8px;
+  margin-left : 7px;
+  margin-right : 6px;
+}
+```
+
+## Setting boarders
+
+- We can set the boarders as follows
+
+```
+.bx{
+  boarder-width : 2px;
+  boarer-style : solid;
+  boarder-color : red;
+}
+
+or
+
+.bx{
+  boarder : 2px solid red;
+}
+```
+
+## Boarder Radious
+
+- We can set boarder radioud to create rounded boarders
+
+```
+div2{
+    boarder-radious : 7px;
+
+}
+```
+
+## Margin Collapse
+
+- When 2 margins from different elements overlap, the equevelent margin is the greater of the two. THis is known as margin collpse
+
+## Box sizing
+
+- Determine what out of padding and boarder is included in elements width and height can be content-boox or boarder-box
+
+```
+div1{
+    box-sizing : boarder-box;
+}
+```
+
+- The content width and height incudes content + padding + boarder
+
+# Font and Display
+
+## display property
+
+- The CSS display property is used to determine whether an element is treated as a block/ inline elemtn and the layout used for its children(flexbox/grid/ etc)
+
+## display-inline
+
+- Taakes only the space required by the element.
+- No linemarks before and after setting width/height not allowed.
+
+## display : block
+
+- Takes full space available in width and leaves a new line before and after the element
+
+## display inline-block
+
+- Similar to inline but setting height, width, margin and padding is allowed.
+- Elements can sit next to each other
+
+## display none vs visibility : hidden
+
+- With display: none, the element is removed from document flow. It's space is not blocked
+- with visibility: hidden, the element is hidden but it's space is reserved
+
+## text align property
+
+- Used to set the norizontal alignment of a text
+
+```
+div{
+    text-align : center;
+}
+```
+
+## text decoration property
+
+- Used to decorate the text
+- Can be overline, line through, underline, none
+
+## text transfer property
+
+- Used to specify uppercase and lowercase letters in a text
+
+```
+p.uppercase{
+  text-transfer : uppercase;
+}
+```
+
+## Line height property
+
+- Used to specify the space between lines
+
+```
+.small{
+  line-height : 0.7;
+}
+```
+
+## font
+
+- Font plays a very important role in the look and feel of a website
+
+## font-family
+
+- Font family specifies the font of a text
+- CAn hold multiple values as a fallback system
+
+```
+p{
+  font-family : "times new roman", monospace;
+}
+```
+
+> > Always do this to ensure the correct font of your choice is rendered
+
+## Web safe fonts
+
+- These fonts are universally installed across browser
+
+## How to add Google fonts
+
+- IN order to use custom google fonts, go to google fonts
+- Then select a style and finally paste it to the style.css of yout page
+
+## Other font properties
+
+- Some of the other font properties are listed below
+- font-size
+- font-style
+- fontvariant
+
+## Generic families
+
+- Broad class of similar font eg serif, sans-serif
+- Just like when we say fruit, it can be any fruit
+
+## font-family -> specific
+
+## generic-family -> Generic
