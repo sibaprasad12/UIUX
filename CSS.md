@@ -256,7 +256,7 @@ body{
   ```
   > > You can define multiple class names in one element separated by space
 
-## Common properties
+# 1.Common properties
 
 - Color can be defined in these types hexadecimal, rgb or color name
 - ```
@@ -310,7 +310,7 @@ body{
 - **position**
 - **layering**
 
-## Colors and Background
+# 2.Colors and Background
 
 - CSS rules are simple key-value pairs with a selector we can write CSS rules o change color and set backgrounds
 
@@ -409,7 +409,7 @@ div3{
 
 - One of the properties acan be missing given the others are in order
 
-# Box Model
+# 3.Box Model
 
 - The CSS Box model looks at all the HTML elements as boxes
 - One Box another, like h1 is one box inside another box body
@@ -508,7 +508,7 @@ div1{
 
 - The content width and height incudes content + padding + boarder
 
-# Font and Display
+# 4.Font and Display
 
 ## display property
 
@@ -610,7 +610,7 @@ p{
 
 ## generic-family -> Generic
 
-# Size position and List
+# 5.Size position and List
 
 - There are more units for describing size other than px.
 - There are rem, cm, vw, vh, percentage etc
@@ -671,4 +671,11 @@ ul {
 
 - The Z-index property specifies the stack order of an element
 - It defines which layer will be above which in case of overlapping elements.
+
+# 6.Flexbox
+
+# 7.CSS grid and Media Query
+
 -
+
+# 8. Transform Transition and Animation
