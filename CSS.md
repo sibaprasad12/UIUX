@@ -679,3 +679,105 @@ ul {
 -
 
 # 8. Transform Transition and Animation
+
+- Transforms are used to rotate, move, skew or scale elements. They are used to create a 3-D effect
+
+### Transform property
+
+- Used to apply a 2D or 3D transformation to an element
+
+### The transform-origin property
+
+- Allows to change the position of transformed elements
+- 2D transforms -> Can change x and y axis
+- 3D transform -> Can change z axis as well
+
+### CSS 2D transform methods
+
+- You can use the following 2D transform in css
+- **translate()**
+- **rotate()**
+- **scaleX()**
+- **scaleY()**
+- **skew()**
+- **matrix()**
+- **scale()**
+
+### CSS 3D transform methods
+
+- **rotateX()**
+- **rotateY()**
+- **rotateZ()**
+
+## CSS Transitions
+
+- Used to change property values smoothly over a given duration.
+
+### The transitin property
+
+- The transition property is used to add transition in CSS
+- Following are the properties used for CSS transition
+
+- **transition - property** the property you want to transition.
+- **transition - duration** Time for which you want transition to apply.
+- **transition - timing function** How you want the property to transistion
+- **transition - delay** Specifies the delay for the transition
+  > > All these properties can be set using a single shorthand property
+- \*\*transition : width 35 ease-in 25;
+- 35 - duration
+- ease-in - timing function
+- 25 -delay
+
+### Transition multiple properties
+
+- WE can transition multiple properties as follows
+
+```
+transition : opacity 1s case-out 15, transform 25 case-in
+
+# CSS Animation
+- Used to animate CSS properties with more conrol
+- We can use @keyframes rule to change the animation from a given style to a new style
+```
+
+@keyframes siba {
+from {width : 20px;} // you can change multiple properties
+to {width : 31 px;}
+}
+
+```
+
+### Properties to add Animations
+- FOllowing are the properties used to set animation in CSS.
+
+- **animation-name** Name of the animation
+- **animation-duration** How long does the animation run
+- **animation-timing-function** Determine speed curve of the animation
+- **animatin-delay** Delay for the start of an animation
+- **animation-iteration-count** Number of times an animation should run
+- **animation-direction** - Specifies the direction of the animation
+
+### Animation shorthand
+- All the animation properties from 1-6 can be applied like this
+- animation : siba 65 linear 15 infinite reverse
+
+### Uaing percentage value states with animation
+- We can use % values to indicate what should happen when a certain percent of animation is completed
+```
+
+@ keyframes siba {
+0% {
+width : 20 px;
+}
+50% {
+width : 80 px;
+}
+100% {
+width : 200 px;
+}
+}
+// Can be add as many intermediate properties as possible
+
+```
+
+```
