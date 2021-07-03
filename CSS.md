@@ -632,4 +632,43 @@ p{
 
 ### rem -> unit relative to the root font size {html tag}
 
-### VW -> Unit relative to 1% View port width
+### VW -> Unit relative to 1% Viewport width
+
+### vh -> Unit relative to 1% of viewport height
+
+### % -> Unit relative to the parent element
+
+## min/max-height/width property
+
+- CSS has a min-height, max-height, min-width, max-width property
+- If the content is smaller than the minimum height minimum height will be applied.
+- Similar is the case with other related properties.
+
+## Position property
+
+- Used to manipulate the location of an element
+- FOllowing are the possible values
+- **static** the default position - top|bottom|left|right|Z-index has no effect
+- **relative** The top|bottom|left|right|Z-index will now work otherwise the element is in the flow of the document like static
+- **fixed** Just like absolute except the element is positioned relative to the browser window.
+- **Sticky** The elements is positioned based on user's scroll position
+
+# List style properties
+
+- The list style property is a shorthand for type, position and image
+
+```
+ul {
+  list-style : square inside url('heavy.jpg')
+}
+```
+
+- square -> list style type
+- inside -> list style position
+- url -> list style image
+
+### Z-index prperty
+
+- The Z-index property specifies the stack order of an element
+- It defines which layer will be above which in case of overlapping elements.
+-
