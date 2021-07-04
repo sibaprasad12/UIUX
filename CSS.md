@@ -674,6 +674,70 @@ ul {
 
 # 6.Flexbox
 
+- Before we look into the CSS flexbox, we will look into float and clear properties
+
+## The float property
+
+- Float property is simple it just flows the element towards left/right
+
+## CLear property
+
+- Used to clear the float. It specifies what elements can float besides given element
+
+## CSS FLexbox
+
+- Aims at providing a better way to layout, aligh and distribute space among items in a container.
+
+```
+container {
+    display : flex; // initialize a dlex
+}
+```
+
+### flex-direction property
+
+- Defines the direction forward which items are laid can be row, row-reverse, column, column-reverse
+
+## FLex propeties for parent(flex container)
+
+- Following are the properties for the flex parent.
+
+### 1. flex-wrap
+
+- Can be wrap, nowrap, wrap-reverse. Wrap items as needed with this property
+
+### 2. justify-content :
+
+- Defines alignment along main axis
+
+### 3. align-items
+
+- Defines alignment along cross axis
+
+### 4. align-content
+
+- Aligns a flex container's lines when there is extra space in the cross axis.
+
+## FLex propeerties for childres (flex items)
+
+-- Following are the properties for the flex children
+
+### 1. Order
+
+- COntrols the order i nwhich the items appears in the flex container
+
+### 2. align-self
+
+- Allows default alignment to be overriden for the individual flex items.
+
+### 3. flex-grow
+
+- Defines the ability for a flex item to grow
+
+### 4. flex-shrink
+
+- Specifies how much a flex item will shrink relative to the rest of the flex items
+
 # 7.CSS grid and Media Query
 
 - A CSS grid can be initialized using
@@ -700,6 +764,66 @@ container {
   grid-gap : 40px 100px;
 }
 40 for row and 100 for column
+```
+
+> > For a single value of grid-gap, both row and column gaps can be set in one alue.
+
+## FOllowing are the roperties for grid container
+
+### The grid-template-columns property can be used to specify the width of column
+
+```
+container{
+  display : grid;
+  grid-template-columns : 80 px 120 px auto;
+}
+```
+
+### The grid-template-rows property can be used to specify the height of each row
+
+```
+container{
+  display : grid;
+  grid-template-rows : 80px 120px;
+}
+```
+
+### The justify-content property is used to allign the whole grid inside the container
+
+### The align-content property is used to vertically align the whole grid inside the container.
+
+## Following are the properties for grid item
+
+### 1. The grid-column property defines how many columns an item will span.
+
+```
+grid-item{
+  grid-column : 1/5
+}
+
+```
+
+### 2. The grid-row property defines how many rows an item will span
+
+### 3. We can make an item to start on column 1 and span 3 columns like this
+
+```
+.item {
+  grid-column : 1 | span 3;
+}
+```
+
+## CSS media queries
+
+- Used to apply CSS only when a certain condition is true
+- Syntax
+
+```
+@media only screen and (max-width : 800 px) {
+  body {
+    background : red;
+  }
+}
 ```
 
 # 8. Transform Transition and Animation
