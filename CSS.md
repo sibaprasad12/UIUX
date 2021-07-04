@@ -929,3 +929,9 @@ width : 200 px;
 ```
 
 ```
+
+
+## Practice Links
+- https://practity.com/481-2/
+- https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1
+- 
